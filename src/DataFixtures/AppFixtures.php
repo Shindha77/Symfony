@@ -50,7 +50,7 @@ class AppFixtures extends Fixture
                             $episode = new Episode();
                             $episode->setTitle('Titre de l\'épisode ' . $k)
                                 ->setNumber($k)
-                                ->setSynopsis('Synopsis de l\épisode ' . $k)
+                                ->setSynopsis('Synopsis de l\'épisode ' . $k)
                                 ->setSeason($season);
                             $manager->persist($episode);
                         }
