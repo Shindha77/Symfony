@@ -29,9 +29,9 @@ class CategoryController extends AbstractController
     /**
      * @Route("/{categoryName}", methods="GET", name="show")
      */
-    public function show(CategoryRepository $c, ProgramRepository $p, string $categoryName): Response
+    public function show(CategoryRepository $cr, ProgramRepository $pr, string $categoryName): Response
     {
-        $category = $c->findOneBy(['name' => $categoryName]);
+        $category = $cr->findOneBy(['name' => $categoryName]);
         
         if (!$category) {
             throw $this->createNotFoundException(
@@ -41,7 +41,7 @@ class CategoryController extends AbstractController
 
         $id = $category->getId();
         
-        $programs = $p->findBy(['category' => $id], ['id' => 'DESC'], 3);
+        $programs = $pr->findBy(['category' => $id], ['id' => 'DESC'], 3);
         
         return $this->render('category/show.html.twig', [
             'programs' => $programs,
