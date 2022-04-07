@@ -47,7 +47,7 @@ class CategoryController extends AbstractController
         $form->handleRequest($request);
 
         // Was the form submitted ?
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $category = $form->getData();
             // Deal with the submitted data
             // Get the Entity Manager
