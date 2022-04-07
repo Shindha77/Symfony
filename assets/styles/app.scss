@@ -1,11 +1,15 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-    background-color: rgb(44, 44, 44);
+    background-color: rgb(144, 144, 144);
     color: white;
 }
 
 .bg-primary {
-    background-color: rgb(109, 109, 109) !important;
+    background-color: rgb(88, 88, 88) !important;
+}
+
+table.table {
+    color: white !important;
 }
 
