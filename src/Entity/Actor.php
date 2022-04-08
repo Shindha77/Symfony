@@ -37,6 +37,11 @@ class Actor
         return $this->id;
     }
 
+    public function getSelector(): string
+    {
+        return $this->getFirstname() . ' ' . $this->getLastname();
+    }
+
     public function getFirstname(): ?string
     {
         return $this->firstname;
